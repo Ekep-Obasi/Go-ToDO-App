@@ -1,0 +1,123 @@
+:root {
+  --header-primary-bg: rgb(83,95,147);
+  --secondary: rgb(237,106,90);
+  --accent: rgb(155,193,188);
+  --gray: rgb(244,244,244);
+  --white: rgb(255, 255, 255);
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+* {
+  margin: 0;
+  font-size: 1rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: none;
+  min-height: 100vh;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+.app__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  width: 30%;
+  box-shadow: var(--shadow);
+  min-height: 500px;
+  border-radius: 8px;
+}
+
+.app__header {
+  width: 100%;
+  min-height: 75px;
+  background-color: var(--header-primary-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  position: relative;
+  border-radius: 8px 8px 0 0;
+}
+
+.app__header h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: 1.4rem;
+  margin-top: 12px;
+}
+
+.app__header form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform: translateY(50%);
+  background-color: var(--white);
+  padding: 10px;
+  gap: 20px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  border-radius: 8px;
+}
+
+#title {
+  border: none;
+  border-bottom: 1px solid var(--gray);
+}
+
+#add-btn {
+  cursor: pointer;
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  background-color: var(--secondary);
+  min-width: 100px;
+  margin: 0 auto;
+  padding: 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  transition: 3ms ease-in;
+}
+
+#add-btn:hover {
+  scale: 0.95;
+  box-shadow: none;
+}
+
+#title:focus {
+  outline: none;
+  border-bottom: 1px solid var(--secondary);
+}
+
+#title::placeholder {
+  font-style: oblique;
+}
+
+.app__body {
+ margin-top: 75px;
+}
+
+table {
+  width: 100%;
+  table-layout: auto;
+  padding: 8px;
+}
+
+thead {
+  background-color: var(--gray);
+}
+
+td {
+  font-size: 0.8rem;
+  padding: 6px;
+}
+
+tr {
+  border-bottom: 1px solid var(--gray);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

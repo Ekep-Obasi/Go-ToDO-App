@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles.css" type="text/css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <section class="app__wrapper">
+      <div class="app__header">
+        <h2>TODO List</h2>
+        <form action="/form" method="post">
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="What would you like to do?"
+          />
+          <button type="submit" id="add-btn">Add</button>
+        </form>
+      </div>
+
+      <div class="app__body">
+        <table>
+          <thead>
+            <tr>
+              <th>List</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+    <script src="assets/index.js"></script>
+  </body>
+</html>
