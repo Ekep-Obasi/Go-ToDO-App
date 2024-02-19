@@ -55,9 +55,9 @@ func todoController(w http.ResponseWriter, r *http.Request) {
 
 		body, err := io.ReadAll(r.Body)
 
-		if err != nil {
-			defer r.Body.Close()
+		defer r.Body.Close()
 
+		if err != nil {
 			http.Error(w, err.Error(), http.StatusBadRequest)
 			return
 		}
@@ -70,7 +70,7 @@ func todoController(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 		}
 
-		newTodoJSON, err := utils.ToJSON(utils.CreateTodo(todo.ID))
+		newTodoJSON, err := utils.ToJSON(utils.CreateTodo(todo.Title))
 
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
