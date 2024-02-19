@@ -5,6 +5,7 @@
   --gray: rgb(244,244,244);
   --white: rgb(255, 255, 255);
   --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --body-bg: rgb(63,195,124);
 }
 
 * {
@@ -20,16 +21,18 @@ body {
   min-height: 100vh;
   font-family: sans-serif;
   width: 100%;
+  background-color: var(--body-bg);
 }
 
 .app__wrapper {
   display: flex;
   flex-direction: column;
   min-width: 320px;
-  width: 30%;
+  width: 40%;
   box-shadow: var(--shadow);
   min-height: 500px;
   border-radius: 8px;
+  background-color: var(--white);
 }
 
 .app__header {
@@ -120,4 +123,10 @@ tr {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#check-btn, #del-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
